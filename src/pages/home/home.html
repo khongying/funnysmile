@@ -1,0 +1,37 @@
+<ion-content  style="background-image: url(assets/imgs/bg.jpg);background-position: center;background-repeat: no-repeat;background-size: cover;">
+  <div id="custom-overlay" *ngIf="loading">
+      <div class="flb">
+        <div class="Aligner-item Aligner-item--top"></div>
+        <img src="assets/imgs/login.png" style="height: 22%;"/>
+        <!-- <h1 style="font-size: 35px;color:beige">FunnySmile</h1> -->
+        <div class="Aligner-item Aligner-item--bottom"></div>
+      </div>
+    </div>
+  <div style="text-align: center">
+    <img src="assets/imgs/login.png" width="50%" height="40%" style="margin-top: 100px" />
+  </div>
+  <div style="padding: 5px;border-radius: 2px;">
+
+
+    <ion-item class="box-login">
+      <ion-label>
+        <ion-icon style="color: aliceblue" ios="ios-person" md="md-person"></ion-icon>
+      </ion-label>
+      <ion-input type="text" id="no_card" [(ngModel)]="no_card" class="text-login"></ion-input>
+    </ion-item>
+    <ion-item class="box-login" style="margin-top: 5px">
+      <ion-label>
+        <ion-icon style="color: aliceblue" ios="ios-card" md="md-card"></ion-icon>
+      </ion-label>
+      <ion-input type="text" id="no_card_patient"  [(ngModel)]="no_card_patient" class="text-login"></ion-input>
+    </ion-item>
+
+
+    <button ion-button full style="border-radius: 50px" (click)="login()">เข้าสู่ระบบ</button>
+  </div>
+  
+
+
+
+  
+</ion-content>

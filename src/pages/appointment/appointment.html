@@ -1,0 +1,106 @@
+<!--
+  Generated template for the AppointmentPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title  id="main">Funny Smile</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding style="background-image: url(assets/imgs/bg.jpg);background-position: center;background-repeat: no-repeat;background-size: cover;">
+  <ion-card *ngIf="swapNO">
+      <ion-item>
+          <span style="font-size: 30px;  color: #0066ff;"> ไม่การมีนัดรักษา</span>
+      </ion-item>
+  </ion-card>
+  <ion-card *ngIf="swap">
+    <ion-item>
+        <ion-label class="head_title">
+          <span style="font-size: 30px;  color: #0066ff;"> ใบนัดการรักษา</span>
+        </ion-label>
+    </ion-item>
+
+    <ion-item class="sub_title">
+      <ion-icon name="md-calendar" item-start large></ion-icon>
+      <h3>{{due_date}}</h3>
+    </ion-item>
+  
+    <ion-item class="sub_title">
+      <ion-icon name="ios-person" item-start large ></ion-icon>
+      <h3>{{name_dentist}}</h3>
+    </ion-item>
+
+    <ion-item class="sub_title"> 
+      <ion-icon name="md-stats" item-start large></ion-icon> 
+      <h3>{{state}}</h3>
+    </ion-item>
+  
+    <ion-item>
+      <button (click)="_sliding()" class="button"  item-end ion-button round>
+        <ion-icon name="md-swap"></ion-icon>
+        &nbsp;เลื่อนนัด
+      </button>
+    </ion-item>
+  
+  </ion-card>
+  
+  <div [ngStyle]="{'display': block}">
+    <ion-card>
+        <ion-item>
+            <ion-label class="head_title">
+                <span style="font-size: 30px;  color: #0066ff;"> เลื่อนนัด</span>
+              </ion-label>
+        </ion-item>
+      
+        <ion-item class="sub_title">
+          <ion-icon name="md-calendar" item-start large ></ion-icon>
+          <ion-datetime displayFormat="DD/MMM/YYYY" [(ngModel)]="sliding_date" placeholder="Select Date"></ion-datetime>
+        </ion-item>
+    
+        <ion-item class="sub_title">
+          <ion-label>Time</ion-label>
+          <ion-select [(ngModel)]="sliding_time" style="width: 500px;">
+            <ion-option disabled="true" selected="true" value=" ">กรุณาเลือก</ion-option>
+            <ion-option value="10.00-10.30">10.00-10.30</ion-option>
+            <ion-option value="10.30-11.00">10.30-11.00</ion-option>
+            <ion-option value="11.00-11.30">11.00-11.30</ion-option>
+            <ion-option value="11.30-12.00">11.30-12.00</ion-option>
+            <ion-option value="12.00-12.30">12.00-12.30</ion-option>
+            <ion-option value="12.30-13.00">12.30-13.00</ion-option> 
+            <ion-option value="13.00-13.30">13.00-13.30</ion-option>
+            <ion-option value="13.30-14.00">13.30-14.00</ion-option>
+            <ion-option value="14.00-14.30">14.00-14.30</ion-option>
+            <ion-option value="14.30-15.00">14.30-15.00</ion-option>
+            <ion-option value="15.00-15.30">15.00-15.30</ion-option>
+            <ion-option value="15.30-16.00">15.30-16.00</ion-option>
+            <ion-option value="16.00-16.30">16.00-16.30</ion-option>
+            <ion-option value="16.30-17.00">16.30-17.00</ion-option>
+            <ion-option value="17.00-17.30">17.00-17.30</ion-option>
+            <ion-option value="17.30-18.00">17.30-18.00</ion-option>
+            <ion-option value="18.00-18.30">18.00-18.30</ion-option>
+            <ion-option value="18.30-19.00">18.30-19.00</ion-option>
+            <ion-option value="19.00-19.30">19.00-19.30</ion-option>
+            <ion-option value="19.30-20.00">19.30-20.00</ion-option>
+          </ion-select>
+        </ion-item>
+
+        <ion-item class="sub_title">
+            <ion-label>เหตุผล</ion-label>
+            <ion-textarea [(ngModel)]="reason" placeholder="Please enter"></ion-textarea>
+        </ion-item>
+      
+        <ion-item>
+            <button (click)="_svae()" class="button"  item-end ion-button round color="secondary">
+              <ion-icon name="md-checkmark-circle"></ion-icon>&nbsp;ยืนยัน
+            </button>
+        </ion-item>
+      
+      </ion-card>
+  </div>
+</ion-content>
+
+

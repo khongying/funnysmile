@@ -1,0 +1,4 @@
+#Tue Mar 12 18:10:11 ICT 2019
+base.0=/Users/khongyingkhunkhet/Documents/funny_smile/platforms/android/app/build/intermediates/transforms/dexMerger/debug/0
+renamed.0=classes.dex
+file.0=/Users/khongyingkhunkhet/Documents/funny_smile/platforms/android/app/build/intermediates/transforms/dexMerger/debug/0/classes.dex

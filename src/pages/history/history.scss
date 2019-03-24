@@ -1,0 +1,28 @@
+page-history {
+    .Wait{
+        color: #ff9933;
+    }
+    .medkit{
+        color: red;
+    }
+    .alarm{
+        color: #0066ff; 
+    }
+    .Success{
+        color: green;
+    }
+    .page{
+        text-shadow: 2px 2px 8px gray;
+    }
+
+    .card-md {
+        background-color: rgba(255, 255, 255, 0.4);
+        border-radius: 30px !important;
+        padding-left: 30px !important;
+        font-size: 0.9em;
+        margin-bottom: 10px;
+        border: 1px solid #ffffff;
+        border-bottom: 0px !important;
+        box-shadow: none !important;
+    }
+}

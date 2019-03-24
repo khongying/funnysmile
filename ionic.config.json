@@ -1,0 +1,7 @@
+{
+  "name": "funny_smile",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

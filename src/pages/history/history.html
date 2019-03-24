@@ -1,0 +1,20 @@
+<ion-header>
+
+    <ion-navbar color="primary">
+        <ion-title  id="main">Funny Smile</ion-title>
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="page" padding style="background-image: url(assets/imgs/bg.jpg);background-position: center;background-repeat: no-repeat;background-size: cover;">
+  <span style="font-size: 30px;  color: #0066ff;"> ประวัติการรักษา</span>
+  <ion-card *ngFor="let item of historyData">
+    <ion-card-header>
+        <ion-icon name="md-medkit" class="medkit"></ion-icon> : {{item.reason}}
+        <p> <ion-icon name="md-alarm" class="alarm"></ion-icon> : {{item.date}} {{item.time}}</p>
+        <p><ion-icon name="ios-person"></ion-icon> : {{item.dentist_gender}} {{item.fname}} {{item.lname}}</p>
+        <p class="{{item.state}}"><ion-icon name="md-stats"></ion-icon> : {{item.state}}</p>      
+    </ion-card-header>
+  </ion-card>
+</ion-content>

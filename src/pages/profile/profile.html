@@ -1,0 +1,54 @@
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title  id="main">Funny Smile</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="page" padding
+  style="background-image: url(assets/imgs/bg.jpg);background-position: center;background-repeat: no-repeat;background-size: cover;">
+  <span style="font-size: 30px;  color: #0066ff;"> โปรไฟล์</span>
+
+  <ion-item>
+    <ion-label>ID</ion-label>
+    <ion-input type="text" [(ngModel)]="no_card" readonly></ion-input>
+  </ion-item>
+  <br />
+  <ion-item>
+    <ion-label>
+      <ion-icon name="card"></ion-icon>
+    </ion-label>
+    <ion-input type="text" [(ngModel)]="no_card_patient" readonly></ion-input>
+  </ion-item>
+  <br />
+  <ion-item>
+    <ion-label>
+      <ion-icon name="person"></ion-icon>
+    </ion-label>
+    <ion-input type="text" [(ngModel)]="full_name"></ion-input>
+  </ion-item>
+  <br />
+  <ion-item>
+    <ion-label>
+      <ion-icon name="call"></ion-icon>
+    </ion-label>
+    <ion-input type="text" [(ngModel)]="phone"></ion-input>
+  </ion-item>
+  <br />
+  <ion-item>
+    <ion-label>
+      <ion-icon name="medkit"></ion-icon>
+    </ion-label>
+    <ion-textarea [(ngModel)]="be_allergic"></ion-textarea>
+  </ion-item>
+  <br />
+  <button (click)="_save()" ion-button full favourite>
+    <ion-icon name="checkmark-circle"></ion-icon>&nbsp; Update
+  </button>
+  <br />
+  <button (click)="_logout()" ion-button full favourite color="danger">
+    <ion-icon name="power"></ion-icon>&nbsp; Log out
+  </button>
+</ion-content>
